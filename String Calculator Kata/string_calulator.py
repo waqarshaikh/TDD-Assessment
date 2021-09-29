@@ -1,3 +1,5 @@
+import re
+
 def add(string:str) -> any:
     if string == "":
         return 0
@@ -6,7 +8,7 @@ def add(string:str) -> any:
         return int(string)
 
     if len(string) > 1:
-        string_list = string.split(",")
+        string_list = re.split(",|\n", string)
         sum = 0
         
         for str in string_list:
