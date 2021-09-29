@@ -1,2 +1,3 @@
 def add(string:str) -> any:
-    pass
+    if string == "":
+        return 0
