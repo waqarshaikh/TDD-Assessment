@@ -21,6 +21,9 @@ class TestStringCalculator(unittest.TestCase):
         # test support different delimiters
         self.assertEqual(string_calulator.add("//;\n1;2"), 3)
 
+        # test negative numbers throw exception
+        self.assertRaises(ValueError, string_calulator.add, "10,-5,-1")
+
 
 if __name__ == "__main__":
     unittest.main()
