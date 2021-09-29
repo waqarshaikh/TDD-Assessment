@@ -8,11 +8,12 @@ def add(string:str) -> any:
         return int(string)
 
     if len(string) > 1:
-        string_list = re.split(",|\n", string)
+        string_list = re.split(",|\n|;", string)
         sum = 0
         
         for str in string_list:
-            num = int(str)
-            sum += num
+            if str.isdigit():
+                num = int(str)
+                sum += num
         
         return sum

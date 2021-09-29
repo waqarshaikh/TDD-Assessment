@@ -18,6 +18,9 @@ class TestStringCalculator(unittest.TestCase):
         # test handle new lines between numbers
         self.assertEqual(string_calulator.add("1\n2,3"), 6)
 
+        # test support different delimiters
+        self.assertEqual(string_calulator.add("//;\n1;2"), 3)
+
 
 if __name__ == "__main__":
     unittest.main()
