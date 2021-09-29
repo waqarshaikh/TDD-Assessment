@@ -12,5 +12,9 @@ class TestStringCalculator(unittest.TestCase):
         # test two numbers return their sum
         self.assertEqual(string_calulator.add("1,2"), 3) 
 
+        # test multilple numbers return their sum
+        self.assertEqual(string_calulator.add("10,20,30"), 60) 
+
+
 if __name__ == "__main__":
     unittest.main()
